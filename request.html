@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request a Service - An7 Creats</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      margin: 0;
+      padding: 20px 15px;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: #f9f9f9;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #007bff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.3s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input:focus, textarea:focus {
+      border-color: #007bff;
+    }
+    button {
+      padding: 14px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .back-link {
+      display: block;
+      margin-top: 25px;
+      text-align: center;
+      font-weight: 600;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Request a Service</h1>
+
+    <!-- ✅ This is the correct Formspree setup -->
+    <form action="https://formspree.io/f/mqakgzvj" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{10,15}" />
+      <textarea name="message" placeholder="your project details"></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+</body>
+</html>
